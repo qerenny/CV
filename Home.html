@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vadim Korchagin - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --font-size: 16px;
+            --background: #ffffff;
+            --foreground: oklch(0.145 0 0);
+            --card: #ffffff;
+            --card-foreground: oklch(0.145 0 0);
+            --popover: oklch(1 0 0);
+            --popover-foreground: oklch(0.145 0 0);
+            --primary: #030213;
+            --primary-foreground: oklch(1 0 0);
+            --secondary: oklch(0.95 0.0058 264.53);
+            --secondary-foreground: #030213;
+            --muted: #ececf0;
+            --muted-foreground: #717182;
+            --accent: #e9ebef;
+            --accent-foreground: #030213;
+            --destructive: #d4183d;
+            --destructive-foreground: #ffffff;
+            --border: rgba(0, 0, 0, 0.1);
+            --input: transparent;
+            --input-background: #f3f3f5;
+            --switch-background: #cbced4;
+            --font-weight-medium: 500;
+            --font-weight-normal: 400;
+            --ring: oklch(0.708 0 0);
+            --radius: 0.625rem;
+        }
+
+        .dark {
+            --background: oklch(0.145 0 0);
+            --foreground: oklch(0.985 0 0);
+            --card: oklch(0.145 0 0);
+            --card-foreground: oklch(0.985 0 0);
+            --popover: oklch(0.145 0 0);
+            --popover-foreground: oklch(0.985 0 0);
+            --primary: oklch(0.985 0 0);
+            --primary-foreground: oklch(0.205 0 0);
+            --secondary: oklch(0.269 0 0);
+            --secondary-foreground: oklch(0.985 0 0);
+            --muted: oklch(0.269 0 0);
+            --muted-foreground: oklch(0.708 0 0);
+            --accent: oklch(0.269 0 0);
+            --accent-foreground: oklch(0.985 0 0);
+            --destructive: oklch(0.396 0.141 25.723);
+            --destructive-foreground: oklch(0.637 0.237 25.331);
+            --border: oklch(0.269 0 0);
+            --input: oklch(0.269 0 0);
+            --ring: oklch(0.439 0 0);
+        }
+
+        body {
+            background-color: #0a0e16;
+            color: #f3f4f6;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-[#0a0e16] text-gray-100">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0e16]/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="Home.html" class="text-xl font-mono text-emerald-400 hover:text-emerald-300 transition-colors">
+                    vadim@portfolio:~$
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="Home.html" class="font-mono transition-colors text-emerald-400">Home</a>
+                    <a href="About.html" class="font-mono transition-colors text-gray-400 hover:text-gray-200">About</a>
+                    <a href="Projects.html" class="font-mono transition-colors text-gray-400 hover:text-gray-200">Projects</a>
+                    <a href="Contact.html" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-md transition-colors font-mono">
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMenu()" class="md:hidden text-gray-400 hover:text-gray-200">
+                    <i id="menu-icon" data-lucide="menu"></i>
+                    <i id="close-icon" data-lucide="x" class="hidden"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <a href="Home.html" class="block w-full text-left font-mono transition-colors text-emerald-400">Home</a>
+                <a href="About.html" class="block w-full text-left font-mono transition-colors text-gray-400 hover:text-gray-200">About</a>
+                <a href="Projects.html" class="block w-full text-left font-mono transition-colors text-gray-400 hover:text-gray-200">Projects</a>
+                <a href="Contact.html" class="block w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-md transition-colors font-mono text-center">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <div class="min-h-screen">
+            <!-- Hero Section -->
+            <section class="max-w-6xl mx-auto px-6 py-20 md:py-32">
+                <div class="space-y-6">
+                    <div class="text-emerald-400 font-mono">$ whoami</div>
+                    <h1 class="text-5xl md:text-7xl text-white">
+                        Vadim Korchagin
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-400">
+                        DevOps Engineer & Fullstack Developer
+                    </h2>
+                    <p class="text-xl text-gray-400 max-w-2xl">
+                        Building scalable architectures and automating infrastructure.
+                        Passionate about cloud technologies, microservices, and clean code.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="Projects.html" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors flex items-center gap-2">
+                            View Projects <i data-lucide="arrow-right" size="20"></i>
+                        </a>
+                        <a href="About.html" class="px-6 py-3 border-2 border-emerald-600 text-emerald-400 hover:bg-emerald-600/10 rounded-lg transition-colors">
+                            About Me
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="max-w-6xl mx-auto px-6 py-20 border-t border-gray-800">
+                <h3 class="text-2xl text-emerald-400 font-mono mb-12">$ cat skills.json</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- DevOps -->
+                    <div class="bg-[#131920] border border-gray-800 rounded-xl p-6 hover:border-emerald-600/50 transition-all hover:shadow-lg hover:shadow-emerald-900/20">
+                        <i data-lucide="terminal" class="text-emerald-400 mb-4" size="32"></i>
+                        <div class="text-gray-300">DevOps</div>
+                    </div>
+                    <!-- Backend -->
+                    <div class="bg-[#131920] border border-gray-800 rounded-xl p-6 hover:border-emerald-600/50 transition-all hover:shadow-lg hover:shadow-emerald-900/20">
+                        <i data-lucide="database" class="text-cyan-400 mb-4" size="32"></i>
+                        <div class="text-gray-300">Backend</div>
+                    </div>
+                    <!-- Cloud -->
+                    <div class="bg-[#131920] border border-gray-800 rounded-xl p-6 hover:border-emerald-600/50 transition-all hover:shadow-lg hover:shadow-emerald-900/20">
+                        <i data-lucide="cloud" class="text-blue-400 mb-4" size="32"></i>
+                        <div class="text-gray-300">Cloud</div>
+                    </div>
+                    <!-- Fullstack -->
+                    <div class="bg-[#131920] border border-gray-800 rounded-xl p-6 hover:border-emerald-600/50 transition-all hover:shadow-lg hover:shadow-emerald-900/20">
+                        <i data-lucide="code-2" class="text-purple-400 mb-4" size="32"></i>
+                        <div class="text-gray-300">Fullstack</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech Stack -->
+            <section class="max-w-6xl mx-auto px-6 py-20 border-t border-gray-800">
+                <h3 class="text-2xl text-emerald-400 font-mono mb-12">$ ls -la /tech-stack</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-[#131920] border border-gray-800 rounded-xl p-6">
+                        <h4 class="text-xl text-emerald-400 mb-4">Backend & DevOps</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-emerald-900/20 text-emerald-300 rounded-md text-sm font-mono border border-emerald-800/30">Docker</span>
+                            <span class="px-3 py-1 bg-emerald-900/20 text-emerald-300 rounded-md text-sm font-mono border border-emerald-800/30">GitHub Actions</span>
+                            <span class="px-3 py-1 bg-emerald-900/20 text-emerald-300 rounded-md text-sm font-mono border border-emerald-800/30">Ansible</span>
+                            <span class="px-3 py-1 bg-emerald-900/20 text-emerald-300 rounded-md text-sm font-mono border border-emerald-800/30">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-emerald-900/20 text-emerald-300 rounded-md text-sm font-mono border border-emerald-800/30">Redis</span>
+                            <span class="px-3 py-1 bg-emerald-900/20 text-emerald-300 rounded-md text-sm font-mono border border-emerald-800/30">RabbitMQ</span>
+                            <span class="px-3 py-1 bg-emerald-900/20 text-emerald-300 rounded-md text-sm font-mono border border-emerald-800/30">Nginx</span>
+                            <span class="px-3 py-1 bg-emerald-900/20 text-emerald-300 rounded-md text-sm font-mono border border-emerald-800/30">Linux</span>
+                        </div>
+                    </div>
+                    <div class="bg-[#131920] border border-gray-800 rounded-xl p-6">
+                        <h4 class="text-xl text-cyan-400 mb-4">Languages & Frameworks</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-900/20 text-cyan-300 rounded-md text-sm font-mono border border-cyan-800/30">Python</span>
+                            <span class="px-3 py-1 bg-cyan-900/20 text-cyan-300 rounded-md text-sm font-mono border border-cyan-800/30">TypeScript</span>
+                            <span class="px-3 py-1 bg-cyan-900/20 text-cyan-300 rounded-md text-sm font-mono border border-cyan-800/30">NestJS</span>
+                            <span class="px-3 py-1 bg-cyan-900/20 text-cyan-300 rounded-md text-sm font-mono border border-cyan-800/30">FastAPI</span>
+                            <span class="px-3 py-1 bg-cyan-900/20 text-cyan-300 rounded-md text-sm font-mono border border-cyan-800/30">Vue 3</span>
+                            <span class="px-3 py-1 bg-cyan-900/20 text-cyan-300 rounded-md text-sm font-mono border border-cyan-800/30">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-cyan-900/20 text-cyan-300 rounded-md text-sm font-mono border border-cyan-800/30">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Stats -->
+            <section class="max-w-6xl mx-auto px-6 py-20 border-t border-gray-800">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="text-4xl text-emerald-400 font-mono mb-2">2+</div>
+                        <div class="text-gray-500">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl text-emerald-400 font-mono mb-2">2</div>
+                        <div class="text-gray-500">Major Projects</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl text-emerald-400 font-mono mb-2">10+</div>
+                        <div class="text-gray-500">Technologies</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl text-emerald-400 font-mono mb-2">∞</div>
+                        <div class="text-gray-500">Learning</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a0e16] border-t border-gray-800 mt-20">
+        <div class="max-w-6xl mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-gray-500 font-mono text-sm">
+                    © <span id="year"></span> Vadim Korchagin. Built with React & TypeScript (Converted to HTML)
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://t.me/gerenny" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-emerald-400 transition-colors" aria-label="Telegram">
+                        <i data-lucide="send" size="20"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-emerald-400 transition-colors" aria-label="GitHub">
+                        <i data-lucide="github" size="20"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-emerald-400 transition-colors" aria-label="LinkedIn">
+                        <i data-lucide="linkedin" size="20"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Update Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
